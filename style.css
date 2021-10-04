@@ -149,7 +149,7 @@ display: inline;
 }
 
 .info span{
-float: right;
+text-align: right;
 font-size:var(--fs-xs);
 transform: translateY(50%);
 color:var(--Pale-blue);
@@ -194,6 +194,6 @@ html{
 				}				
 				.info span{
 				display: block;
-				float: left;	
+				text-align: left;
 				}
 }
