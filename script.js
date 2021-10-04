@@ -10,6 +10,7 @@ data=await response.json();
 }
 
 const showData=()=>{
+     btns[Object.keys(value).indexOf(frame)]. style.color="#fff";
      let index=0;
 				data.map((info)=>{
 							var {title,timeframes}=info;
