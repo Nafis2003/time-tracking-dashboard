@@ -1,5 +1,30 @@
-var cards=document.querySelectorAll(".cards");
+const  cardInfo=document.querySelectorAll(".info");
+const btns=document.querySelectorAll("#timeframes span");
+var data=[];
+var frame="weekly";
+var value={"daily":"day","weekly":"week", "monthly":"month"};
 
-var response= fetch ("https://github.com/Nafis2003/time-tracking-dashboard/blob/23a6f3c6a4f90414145f791600f4c1df2242d850/data.json");
-var data=response.json();
+const fetchData= async()=>{
+var response=await fetch ("https://nafis2003.github.io/time-tracking-dashboard/data.json");
+data=await response.json();
+}
+
+const showData=()=>{
+     let index=0;
+				data.map((info)=>{
+							var {title,timeframes}=info;
+							var timeframe=timeframes[frame];
+							var text=`<h2>${title}</h2>
+				<p>${timeframe.current}hrs<span>Last ${value[frame]} - ${timeframe.previous}hrs</span></p>	`
+							cardInfo[index].innerHTML=text;
+							index++;
+				}			
+				);
+}
+
+fetchData().then(()=>{showData()},()=>alert ("SOMETHING WENT WRONG"));
+
+btns.forEach(btn=>{
+				btn.addEventListener("click",()=>{frame=btn.textContent.toLowerCase();showData();});
+});
 
