@@ -50,7 +50,9 @@ padding:5rem 1rem;
 				background: var(--Dark-blue);
 				color:var(--Pale-blue);
 				border-radius: 1rem;
-}
+				display: grid;
+				align-items: stretch;
+				}
 
 #profile{
      display: flex;
@@ -171,7 +173,7 @@ html{
 --fs-sm:2rem;
 }
 				main{
-				grid-template-rows:repeat(2,300px);
+				grid-template-rows:repeat(2,270px);
 				grid-template-columns: repeat(4,1fr);
 				grid-gap:1.5rem;
 				}
@@ -181,6 +183,8 @@ html{
 				}			
 				#profile,#timeframes{
 								flex-direction: column;
+								justify-content: center;
+								outline: 2px solid #fff;
 				}
 				#profile>img{
 				width:6rem;
