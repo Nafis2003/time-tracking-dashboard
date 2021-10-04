@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 html{
 --Blue: hsl(246, 80%, 60%);
 --Light-red: hsl(15, 100%, 70%);
@@ -145,11 +145,12 @@ float: right;
 margin-top:1rem;
 font-weight:300;
 font-size:var(--fs-sm);
+outline: 2px solid #fff;
 display: inline;
 }
 
 .info span{
-text-align: right;
+float: right;
 font-size:var(--fs-xs);
 transform: translateY(50%);
 color:var(--Pale-blue);
@@ -170,7 +171,7 @@ html{
 --fs-sm:2rem;
 }
 				main{
-				grid-template-rows:repeat(2,260px);
+				grid-template-rows:repeat(2,300px);
 				grid-template-columns: repeat(4,1fr);
 				grid-gap:1.5rem;
 				}
@@ -185,7 +186,7 @@ html{
 				width:6rem;
 				align-self:flex-start;
 				}				
-				:is(#profile,#timeframes)>*{
+				:is(#profile,#timeframes)>*{width: ;
 				margin: 0.5rem;
 				}				
 				.info>p{	
@@ -194,6 +195,6 @@ html{
 				}				
 				.info span{
 				display: block;
-				text-align: left;
+				float: left;
 				}
 }
