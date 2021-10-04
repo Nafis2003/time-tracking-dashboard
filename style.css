@@ -193,6 +193,7 @@ html{
 				margin-top:1.75rem;
 				}				
 				.info span{
+				display: block;
 				float: left;	
 				}
 }
