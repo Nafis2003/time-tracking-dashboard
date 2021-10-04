@@ -2,6 +2,7 @@
 
 ![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)
 
+Live preview:https://nafis2003.github.io/time-tracking-dashboard/
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
