@@ -13,7 +13,7 @@ html{
 --Pale-blue: hsl(236, 100%, 87%);
 font-size:18px;
 --fs-title:1rem;
---fs-xs:0.8rem;
+--fs-xs:0.75rem;
 --fs-sm:1.5rem;
 }
 
@@ -22,7 +22,6 @@ font-size:18px;
 				margin: 0;
 				box-sizing:border-box;
 }
-
 
 body{
 background:var(--Very-dark-blue);
@@ -60,9 +59,6 @@ padding:5rem 1rem;
      gap:1rem;
 				background:var(--Blue);
 }
-img{
-max-width: 100%;
-}
 #profile img{
 width: 4rem;
 border:4px solid #fff;
@@ -86,6 +82,7 @@ color:#fff;
 				cursor:pointer;
 }
 
+#timeframes>span:hover{color:#fff;}
 .card{
 background-color: var(--Light-red);
 background-image: url('images/icon-work.svg');
@@ -128,14 +125,15 @@ width: 100%;
 height: 100%;
 display: flex;
 justify-content:space-between;
-flex-direction: column;
-outline: 2px solid #fff;
+flex-wrap: wrap;
 cursor: pointer;
+transition: 0.5s;
 }
 
 .info h2{
 font-size: var(--fs-title);
 font-weight: 500;
+width:100%;
 }
 
 .info>h2::after{
@@ -146,16 +144,12 @@ float: right;
 .info p{
 font-weight:300;
 font-size:var(--fs-sm);
-display: inline;
-
 }
 
 .info span{
-outline: 3px solid red;
+transform: translateY(25%);
 font-size:var(--fs-xs);
 color:var(--Pale-blue);
-float: right;
-transform: translateY(50%);
 }
 
 footer {
@@ -164,41 +158,32 @@ bottom: 1rem;
 width: 100%;
 }
 
-.attribution { font-size: 1rem; text-align: center; }
+.attribution {font-size: 1rem; text-align: center; }
     .attribution a { color: var(--Lime-green); }
 
 @media(min-width:1000px){
 html{
 --fs-xs:1rem;
---fs-sm:2rem;
+--fs-sm:2.5rem;
 }
 				main{
-				grid-template-rows:repeat(2,260px);
+				grid-template-rows:repeat(2,250px);
 				grid-template-columns: repeat(4,1fr);
 				grid-gap:1.5rem;
 				}
 				#container{
-			grid-column:1/1;
-			grid-row:1/3;
+			grid-area:1/1/3/2;
 				}			
 				#profile,#timeframes{
 								flex-direction: column;
-								justify-content: center;
-								outline: 2px solid #fff;
+								justify-content:center;
 				}
 				#profile>img{
 				width:6rem;
 				align-self:flex-start;
 				}				
-				:is(#profile,#timeframes)>*{width: ;
-				margin: 0.5rem;
-				}				
-				.info>p{	
-				display: block;
-				}				
-				.info span{
-				display: block;
-				float: left;
-				transform: unset;
-				}
+				#profile{align-items: flex-start;}
+				#timeframes{justify-content: space-between;}
+				.info :is(p,span){width:100%;transform: unset;}
+				.info h2{margin-bottom:1.5rem;}
 }
