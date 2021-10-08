@@ -65,15 +65,16 @@ border:4px solid #fff;
 border-radius:50%;
 }
 
-#profile p{
-font-size:var(--fs-xs);
-font-weight: 400;
-}
-
-#profile p span{
+#profile h1{
 font-size:var(--fs-sm);
 font-weight: 300;
 color:#fff;
+}
+
+#profile h1 span{
+font-size:var(--fs-xs);
+font-weight: 400 ;
+color:var(--Pale-blue);
 }
 
 #timeframes{
